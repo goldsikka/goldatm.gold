@@ -1,0 +1,442 @@
+$gold-color: #edd368;
+
+body {
+    font-family: 'Serif', serif;
+    /* Change the font-family to a serif font */
+}
+
+.space {
+    padding: 60px 0px;
+}
+
+.theme-button {
+    padding: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 0px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* Fixed navbar */
+.navbar {
+
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 5px 0px;
+
+    /* Logo left, nav items right */
+    .navbar-brand {
+        margin-right: auto;
+        padding: 0px;
+        width: 15%;
+
+        img {
+            width: 58%;
+        }
+    }
+
+    .navbar-nav {
+        margin-left: auto;
+
+        .nav-item {
+            padding: 0px 5px;
+
+            .nav-link {
+                color: #000;
+                font-size: 18px;
+            }
+        }
+    }
+
+
+}
+
+
+/* Style for the scrolled class */
+.scrolled {
+    background-color: #fff;
+    position: fixed;
+    /* Change the background color when scrolled */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add box-shadow or any other styles */
+    transition: background-color 0.3s ease;
+
+    /* Add smooth transition effect */
+    .nav-item {
+        .nav-link {
+            color: #000 !important;
+
+        }
+    }
+}
+
+#carouselExampleIndicators {
+
+    .web,
+    .mob {
+        width: 100%;
+    }
+
+    .mob {
+        display: none;
+    }
+
+    img {
+        height: auto;
+    }
+
+    .carousel-indicators {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        border: none;
+        border-radius: 50%;
+        margin: 5px;
+        background-color: #999;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .carousel-indicators button.active {
+        width: 30px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+
+}
+
+.our-poducts {
+    #our-poducts {
+        .carousel-caption {
+            top: 0;
+            padding-top: 5rem;
+            padding-left: 5rem;
+            padding-bottom: 0px;
+            width: 50%;
+            text-align: left;
+            left: 0;
+
+            a {}
+        }
+    }
+}
+
+.about-atm {
+    .bg {
+        background-image: url(../img/digital-bg.jpg);
+        background-size: 100% 100%;
+
+        h2 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        p {
+            color: #fff;
+            margin-left: 25px;
+
+            i {
+                font-size: 14px;
+                padding-right: 10px;
+            }
+
+            b {
+                color: $gold-color;
+            }
+        }
+
+        p:nth-child(5) {
+            margin-bottom: 0px;
+        }
+
+        padding: 5%;
+        border-radius: 5px;
+    }
+}
+
+.discription {
+
+    h2,
+    sup {
+        text-align: center;
+        background: -webkit-linear-gradient($gold-color, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .text {
+        h3 {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        ul {
+            padding-left: 50px;
+        }
+
+        li {
+            b {
+                color: grey;
+            }
+
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+    }
+
+}
+
+.introduction {
+
+    .img {
+
+        background-color: #000;
+        height: 97%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .bg {
+        // box-shadow: 2px 1px 1px 1px #000;
+        // background-color: grey;
+        // padding: 10px;
+
+        .box {
+            background-color: #fff;
+            box-shadow: 1px 1px 5px 1px #000;
+            padding: 20px;
+            margin-bottom: 20px;
+
+            .text {
+                p:nth-child(1) {
+                    font-size: 16px;
+                    text-align: right;
+                    margin-bottom: -10px;
+                    font-weight: 600;
+                    font-style: italic;
+                }
+
+                p {
+                    u {
+                        text-decoration: none;
+                        font-size: 40px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.india-first {
+    h3 {
+        text-align: center;
+        text-shadow: 1px 1px 10px #0505057a;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .text {
+        p {
+            text-align: left;
+        }
+
+        p:nth-child(1),
+        p:nth-child(3),
+        p:nth-child(5),
+        p:nth-child(9) {
+            margin-bottom: 0px;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.contact {
+    .location {
+        img {
+            width: 100%;
+        }
+
+        .map {
+            padding-left: 10%;
+
+            p:nth-child(2) {
+                padding: 6% 0;
+            }
+
+            h3 {
+                font-weight: 100;
+                text-align: left;
+            }
+
+            img {
+                color: #000;
+                width: 30px;
+
+            }
+
+
+            p {
+
+                a {
+                    color: #000;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .form {
+        p {
+            font-size: 20px;
+            margin-bottom: 0px;
+        }
+
+        .form-control {
+            border-bottom: 1px solid #000 !important;
+            border: none;
+        }
+
+        button {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 0px;
+            margin-top: 20px;
+        }
+    }
+
+    h3 {
+        text-align: center;
+
+    }
+
+    .bg {
+        padding: 10px;
+        border-radius: 10px;
+
+        h3 {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .contact-text {
+            display: flex;
+            padding-left: 6%;
+
+            i {
+                background-color: #000;
+                border-radius: 50%;
+                font-size: 20px;
+                margin: 10px;
+                height: 45px;
+                width: 45px;
+                background: #000;
+                line-height: 45px;
+                text-align: center;
+                color: #fff;
+            }
+
+            .text {
+                margin-top: 10px;
+                margin-left: 10px;
+
+                p:nth-child(1) {
+                    color: #000;
+                    margin-bottom: 0px;
+                }
+            }
+
+            p:nth-child(2) {
+                color: #000;
+                font-weight: 100;
+            }
+        }
+
+    }
+}
+
+.bottom-bar {
+    background-color: #000;
+
+    p {
+        padding: 5px 0px;
+        margin-bottom: 0px;
+        color: #fff;
+        font-size: 15px;
+
+        a {
+            color: $gold-color;
+            text-decoration: none;
+        }
+
+        u {
+            float: right;
+
+            a {
+                padding: 0px 10px;
+
+                i {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+.map{
+    iframe{
+        width: 100%;
+        
+    }
+}
+@media only screen and (max-width: 767px) {
+    .scrolled {
+        box-shadow: none;
+    }
+
+    .navbar .navbar-brand img {
+        width: 100%;
+    }
+
+    #carouselExampleIndicators {
+        .web {
+            display: none;
+        }
+
+        .mob {
+            display: block;
+            height: auto;
+            padding-top: 10%;
+        }
+    }
+
+}

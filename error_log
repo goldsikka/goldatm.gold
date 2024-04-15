@@ -1,0 +1,94 @@
+[07-Nov-2023 09:37:03 UTC] PHP Notice:  Undefined variable: _SESSION in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 296
+[07-Nov-2023 09:37:10 UTC] PHP Notice:  Undefined variable: _SESSION in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 296
+[07-Nov-2023 09:40:26 UTC] PHP Notice:  Undefined variable: _SESSION in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 296
+[07-Nov-2023 09:41:00 UTC] PHP Notice:  Undefined variable: _SESSION in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 296
+[07-Nov-2023 09:43:23 UTC] PHP Notice:  Undefined variable: _SESSION in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 296
+[07-Nov-2023 09:44:09 UTC] PHP Notice:  Undefined variable: _SESSION in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 296
+[07-Nov-2023 09:44:10 UTC] PHP Notice:  Undefined variable: _SESSION in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 296
+[07-Nov-2023 09:51:49 UTC] PHP Notice:  Undefined index: decision in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 299
+[07-Nov-2023 09:51:51 UTC] PHP Notice:  Undefined index: decision in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 299
+[07-Nov-2023 09:51:55 UTC] PHP Notice:  Undefined index: decision in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 299
+[07-Nov-2023 09:53:58 UTC] PHP Notice:  Undefined index: decision in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 299
+[07-Nov-2023 09:54:24 UTC] PHP Notice:  Undefined index: decision in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 299
+[07-Nov-2023 09:55:16 UTC] PHP Notice:  Undefined index: ../../decision in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 299
+[07-Nov-2023 09:55:46 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 297
+[07-Nov-2023 09:55:46 UTC] PHP Notice:  Undefined variable: _SESSION in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 300
+[07-Nov-2023 09:56:01 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 262
+[07-Nov-2023 09:56:01 UTC] PHP Notice:  Undefined variable: _SESSION in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 301
+[07-Nov-2023 09:59:50 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 299
+[07-Nov-2023 09:59:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 299
+[07-Nov-2023 10:00:17 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 297
+[07-Nov-2023 10:01:05 UTC] PHP Notice:  Undefined variable: separator in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 24
+[07-Nov-2023 10:01:05 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 24
+[07-Nov-2023 10:01:05 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 25
+[07-Nov-2023 10:01:05 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 26
+[07-Nov-2023 10:01:05 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 27
+[07-Nov-2023 11:54:55 UTC] PHP Notice:  Undefined variable: message in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 22
+[07-Nov-2023 11:56:04 UTC] PHP Notice:  Undefined variable: message in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 22
+[07-Nov-2023 11:56:28 UTC] PHP Notice:  Undefined variable: message in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 22
+[07-Nov-2023 12:16:51 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 4
+[07-Nov-2023 12:16:51 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 5
+[07-Nov-2023 12:29:49 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 4
+[07-Nov-2023 12:29:49 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 5
+[07-Nov-2023 12:31:31 UTC] PHP Notice:  Undefined variable: fileName in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 21
+[07-Nov-2023 12:32:47 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 2
+[07-Nov-2023 12:32:47 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 3
+[07-Nov-2023 12:34:47 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 2
+[07-Nov-2023 12:34:47 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 3
+[07-Nov-2023 22:24:32 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 2
+[07-Nov-2023 22:24:32 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 3
+[08-Nov-2023 12:49:56 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 2
+[08-Nov-2023 12:49:56 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 3
+[13-Nov-2023 05:04:33 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 2
+[13-Nov-2023 05:04:33 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 3
+[13-Nov-2023 05:12:27 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 2
+[13-Nov-2023 05:12:27 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 3
+[13-Nov-2023 05:12:52 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 2
+[13-Nov-2023 05:12:52 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 3
+[13-Nov-2023 06:37:19 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-us.php on line 2
+[13-Nov-2023 06:37:19 UTC] PHP Notice:  Undefined variable: _SESSION in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-us.php on line 34
+[13-Nov-2023 06:37:21 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-us.php on line 2
+[13-Nov-2023 06:37:21 UTC] PHP Notice:  Undefined variable: _SESSION in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-us.php on line 34
+[13-Nov-2023 06:37:51 UTC] PHP Notice:  Undefined index: decision in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-us.php on line 32
+[13-Nov-2023 06:38:44 UTC] PHP Notice:  Undefined index: decision in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-us.php on line 32
+[13-Nov-2023 06:38:45 UTC] PHP Notice:  Undefined index: decision in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-us.php on line 32
+[13-Nov-2023 06:48:20 UTC] PHP Notice:  Undefined index: decision in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-us.php on line 32
+[13-Nov-2023 06:48:22 UTC] PHP Notice:  Undefined index: decision in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-us.php on line 32
+[13-Nov-2023 06:48:23 UTC] PHP Notice:  Undefined index: decision in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-us.php on line 32
+[13-Nov-2023 06:57:47 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-us.php on line 32
+[13-Nov-2023 06:57:50 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-us.php on line 32
+[13-Nov-2023 06:58:42 UTC] PHP Notice:  Undefined variable: separator in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 22
+[13-Nov-2023 06:58:42 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 22
+[13-Nov-2023 06:58:42 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 23
+[13-Nov-2023 06:58:42 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 24
+[13-Nov-2023 06:58:42 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 25
+[13-Nov-2023 07:02:00 UTC] PHP Notice:  Undefined variable: separator in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 22
+[13-Nov-2023 07:02:00 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 22
+[13-Nov-2023 07:02:00 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 23
+[13-Nov-2023 07:02:00 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 24
+[13-Nov-2023 07:02:00 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 25
+[13-Nov-2023 07:02:30 UTC] PHP Notice:  Undefined variable: separator in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 22
+[13-Nov-2023 07:02:30 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 22
+[13-Nov-2023 07:02:30 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 23
+[13-Nov-2023 07:02:30 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 24
+[13-Nov-2023 07:02:30 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 25
+[13-Nov-2023 07:05:49 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 22
+[13-Nov-2023 07:05:49 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 23
+[13-Nov-2023 07:05:49 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 24
+[13-Nov-2023 07:05:49 UTC] PHP Notice:  Undefined variable: eol in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 25
+[13-Nov-2023 09:24:31 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 8
+[13-Nov-2023 09:24:31 UTC] PHP Notice:  Undefined index: file in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 9
+[13-Nov-2023 09:27:36 UTC] PHP Notice:  Undefined variable: fileName in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 25
+[13-Nov-2023 09:30:27 UTC] PHP Notice:  Undefined variable: content in /home/u5hlwihvc6gu/public_html/goldatm.gold/contact-mail.php on line 43
+[14-Nov-2023 05:22:26 UTC] PHP Notice:  Undefined index: name in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 306
+[14-Nov-2023 05:22:26 UTC] PHP Notice:  Undefined index: email in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 307
+[14-Nov-2023 05:22:26 UTC] PHP Notice:  Undefined index: phone in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 308
+[14-Nov-2023 05:22:26 UTC] PHP Notice:  Undefined index: city in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 309
+[14-Nov-2023 05:22:26 UTC] PHP Notice:  Undefined index: state in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 310
+[14-Nov-2023 05:22:26 UTC] PHP Notice:  Undefined index: description in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 311
+[14-Nov-2023 05:22:35 UTC] PHP Notice:  Undefined index: name in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 306
+[14-Nov-2023 05:22:35 UTC] PHP Notice:  Undefined index: email in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 307
+[14-Nov-2023 05:22:35 UTC] PHP Notice:  Undefined index: phone in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 308
+[14-Nov-2023 05:22:35 UTC] PHP Notice:  Undefined index: city in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 309
+[14-Nov-2023 05:22:35 UTC] PHP Notice:  Undefined index: state in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 310
+[14-Nov-2023 05:22:35 UTC] PHP Notice:  Undefined index: description in /home/u5hlwihvc6gu/public_html/goldatm.gold/index.php on line 311
