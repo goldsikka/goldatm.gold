@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "goldbox-new-ui": {
+    "goldatm": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/goldbox-new-ui",
+            "outputPath": "dist/goldatm",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -51,8 +51,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "5kb",
+                  "maximumError": "5kb"
                 }
               ],
               "outputHashing": "all"
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "goldbox-new-ui:build:production"
+              "buildTarget": "goldatm:build:production"
             },
             "development": {
-              "buildTarget": "goldbox-new-ui:build:development"
+              "buildTarget": "goldatm:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "goldbox-new-ui:build"
+            "buildTarget": "goldatm:build"
           }
         },
         "test": {

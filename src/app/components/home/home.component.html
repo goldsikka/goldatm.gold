@@ -35,15 +35,61 @@
 
 
 </div>
+<section class="live-rates mt-4 mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="img">
+                    <img src="assets/img/live-rates-banner.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text gold">
+                    <p class="purity"><img src="assets/img/security.svg" alt="">100% Hallmarked <b>24k 999 Pure Gold</b>
+                    </p>
+                    <div class="row">
+                        <div class="col-md-4 col-4">
+                            <img src="assets/img/gold-rate-img.png" alt="">
+                        </div>
+                        <div class="col-md-8 col-8">
+                            <div class="rate">
+                                <p>Gold Live Price Per Gram</p>
+                                <p><b [ngStyle]="{'color': livesellprice24color}">{{livesellprice24|currency}}</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text silver">
+                    <p class="purity"><img src="assets/img/security.svg" alt="">100% Hallmarked <b>99.9% Pure Silver</b>
+                    </p>
+                    <div class="row">
+                        <div class="col-md-4 col-4">
+                            <img src="assets/img/silver-rate-img.png" alt="">
+                        </div>
+                        <div class="col-md-8 col-8">
+                            <div class="rate">
+                                <p>Silver Live Price Per 1Kg</p>
+                                <p><b [ngStyle]="{'color': livesellpricesilvercolor}">
+                                        {{ livesellpricesilver | currency}}</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-home mb-4" id="about-us">
 
-<section class="about-home space" id="about-us">
-
-    <h2 class="headings mb-4">First-ever <b>Gold ATM</b> Launch Event    </h2>
+    <h2 class="headings mb-4">First-ever <b>Gold ATM</b> Launch Event </h2>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <a href="https://www.youtube.com/watch?v=BtHSlZfDzPc" target="_blank"><img src="assets/img/youtube-1.png" alt=""></a>
-                
+                <a href="https://www.youtube.com/watch?v=BtHSlZfDzPc" target="_blank"><img
+                        src="assets/img/youtube-1.png" alt=""></a>
+
             </div>
             <div class="col-md-6">
 
@@ -55,7 +101,8 @@
                                 <h2>GoldSikka Limited's First Gold ATM Launch:</h2>
                                 <img src="assets/img/gold-atm-launch.svg" alt="">
                                 <h3>Inaugural Gold ATM Launch:</h3>
-                                <p>Goldsikka Limited launched the world's first real-time Gold ATM in Hyderabad on December 3, 2022, introducing a groundbreaking innovation</p>
+                                <p>Goldsikka Limited launched the world's first real-time Gold ATM in Hyderabad on
+                                    December 3, 2022, introducing a groundbreaking innovation</p>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -63,7 +110,8 @@
                                 <h2>GoldSikka Limited's First Gold ATM Launch:</h2>
                                 <img src="assets/img/beyond-jewelry-stores.svg" alt="">
                                 <h3>Improved ease of access:</h3>
-                                <p>Gold ATMs allow a wider variety of individuals to utilize their preferred payment cards for purchasing gold.</p>
+                                <p>Gold ATMs allow a wider variety of individuals to utilize their preferred payment
+                                    cards for purchasing gold.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -156,13 +204,14 @@
                 <div class="box">
                     <img src="assets/img/diverse-investment-options.svg" alt="">
                     <h2>Security:</h2>
-                    <p>Installed with 24/7 camera surveillance, seizing unauthorized intruders with machine precision.</p>
+                    <p>Installed with 24/7 camera surveillance, seizing unauthorized intruders with machine precision.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="introduction-home space" id="innovative">
+<section class="introduction-home" id="innovative">
 
     <h2 class="headings mb-4"> <b>Gold ATM</b>s are expanding ! More locations to turn cash into gold
 
@@ -244,23 +293,31 @@
                 </div>
             </div>
             <div class="col-md-6">
-               <a href="https://www.youtube.com/watch?v=P5acY0nv27s&t=1s" target="_blank">
-                <img src="assets/img/youtube-2.png" alt="">
-               </a>
+                <a href="https://www.youtube.com/watch?v=P5acY0nv27s&t=1s" target="_blank">
+                    <img src="assets/img/youtube-2.png" alt="">
+                </a>
             </div>
         </div>
         <div class="text">
-           
-            <p> In the current market, gold may be purchased by anybody, just like any other commodity. <b>Goldsikka Limited</b> introduced India's first <b>Gold ATM</b>, a digital marketplace for buying . Buyers may use any credit or debit card to instantly acquire genuine gold from these <b>Gold ATM</b>s. Additionally, the company provides prepaid and postpaid smart cards, making acquiring gold as straightforward as withdrawing cash from an <b>ATM</b>.
-</p><p>
-                Similar to other <b>ATM</b>s, the buyer selects the amount of gold desired, which is presented on the screen along with the price with the current gold rate, and the gold is released. Nowadays, gold's unshakable demand causes gold prices to leap to new highs, and the <b>Gold ATM</b> strives to be the one-stop gold  buying platform.
-                </p>
+
+            <p> In the current market, gold may be purchased by anybody, just like any other commodity. <b>Goldsikka
+                    Limited</b> introduced India's first <b>Gold ATM</b>, a digital marketplace for buying . Buyers may
+                use any credit or debit card to instantly acquire genuine gold from these <b>Gold ATM</b>s.
+                Additionally, the company provides prepaid and postpaid smart cards, making acquiring gold as
+                straightforward as withdrawing cash from an <b>ATM</b>.
+            </p>
+            <p>
+                Similar to other <b>ATM</b>s, the buyer selects the amount of gold desired, which is presented on the
+                screen along with the price with the current gold rate, and the gold is released. Nowadays, gold's
+                unshakable demand causes gold prices to leap to new highs, and the <b>Gold ATM</b> strives to be the
+                one-stop gold buying platform.
+            </p>
         </div>
     </div>
 </section>
 <section class="evolution space" id="progressive">
     <div class="container">
-        <h2 class="headings">Making gold investing easy, clear, and reliable.</h2>
+        <h2 class="headings mb-4">Making gold investing easy, clear, and reliable.</h2>
         <!-- <p><i>Making gold investing easy, clear, and reliable.</i></p> -->
         <div class="row">
             <div class="col-md-4">
@@ -277,26 +334,183 @@
                     <p>The Emergence of Gold ATMs by Goldsikka Limited: Making Gold Accessible to the Public.</p>
                     <p><b>3. Market Reflection and Gold Dispensing:</b></p>
                     <p>Real-time Pricing and All-Time Highs: Gold ATMs Reflect Market Demand and Dispense Gold.</p>
-                    <p><b>4. Varied  bars:</b></p>
-                    <p>Meeting diverse demands with coin options ranging from 0.5 to 100 grams, reflecting a growing trend in preference.</p>
+                    <p><b>4. Varied bars:</b></p>
+                    <p>Meeting diverse demands with coin options ranging from 0.5 to 100 grams, reflecting a growing
+                        trend in preference.</p>
                     <p><b>5. Ensuring purity and providing information:</b></p>
-                    <p>Provides real-time gold prices, 24/7 access to certified 24-carat gold coins (0.5 gms - 100 gms), and transparent transactions for assured purity.
+                    <p>Provides real-time gold prices, 24/7 access to certified 24-carat gold coins (0.5 gms - 100 gms),
+                        and transparent transactions for assured purity.
                     </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- <section class="stock-details">
+    <div class="container">
+        <h2 class="headings mb-4">Available stock details</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <select id="cityDropdown" class="form-select">
+                    <option selected>Select City * </option>
+                    <option value="hyderabad">Hyderabad</option>
+                    <option value="visakhapatnam">Visakhapatnam</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+
+                <select id="locationDropdown" class="form-select">
+                    <option selected>Select Location *</option>
+                    <option value="hyderabad">Ameerpet</option>
+                    <option value="visakhapatnam">Prakesh Nagar</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select id="category" class="form-select">
+                    <option selected>Select Category</option>
+                    <option value="hyderabad">Gold</option>
+                    <option value="visakhapatnam">Silver</option>
+                </select>
+            </div>
+        </div>
+        <div class="img">
+            <img src="assets/img/select-atm.png" alt="">
+        </div>
+        <div class="stock">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="box">
+                        <p>
+                            Type <b>Gold</b>
+                        </p>
+                        <p>
+                            Gram <b>0.5</b>
+                        </p>
+                        <p class="text-success">
+                            Available
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box">
+                        <p>
+                            Type <b>Gold</b>
+                        </p>
+                        <p>
+                            Gram <b>1</b>
+                        </p>
+                        <p class="text-danger">
+                            Out of Stok
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box">
+                        <p>
+                            Type <b>Gold</b>
+                        </p>
+                        <p>
+                            Grams <b>2</b>
+                        </p>
+                        <p class="text-success">
+                            Available
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box">
+                        <p>
+                            Type <b>Gold</b>
+                        </p>
+                        <p>
+                            Grams <b>5</b>
+                        </p>
+                        <p class="text-success">
+                            Available
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box">
+                        <p>
+                            Type <b>Gold</b>
+                        </p>
+                        <p>
+                            Grams <b>10</b>
+                        </p>
+                        <p class="text-success">
+                            Available
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="box">
+                        <p>
+                            Type <b>Silver</b>
+                        </p>
+                        <p>
+                            Grams <b>10</b>
+                        </p>
+                        <p class="text-success">
+                            Available
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box">
+                        <p>
+                            Type <b>Silver</b>
+                        </p>
+                        <p>
+                            Grams <b>20</b>
+                        </p>
+                        <p class="text-success">
+                            Available
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box">
+                        <p>
+                            Type <b>Silver</b>
+                        </p>
+                        <p>
+                            Grams <b>50</b>
+                        </p>
+                        <p class="text-success">
+                            Available
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box">
+                        <p>
+                            Type <b>Silver</b>
+                        </p>
+                        <p>
+                            Grams <b>100</b>
+                        </p>
+                        <p class="text-success">
+                            Available
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
 <section class="locations mb-4">
     <div class="container">
-        <h2>Our Locations</h2>
+        <h2 class="headings mb-4">Our Locations</h2>
         <iframe
             src="https://www.google.com.qa/maps/d/u/0/embed?mid=1xKWKZlW9lgPZWrndQsJfmSLLnm4eTJM&hl=en&ll=17.4399,78.4983&z=12&ehbc=2E312F&noprof=1"
             width="100%" height="480"></iframe>
     </div>
 </section>
 <section class="reach-us" id="contact-us">
-    <h2>Reach Us</h2>
+    <h2 class="headings mb-4">Reach Us</h2>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -306,7 +520,8 @@
                             <img src="assets/img/location.svg" alt="">
                         </div>
                         <div class="text">
-                            <p> <b>Registered Office :</b> Ashoka Raghupathi Chambers , Chikoti Garden Rd, Old Patigadda, Chikoti Gardens, Begumpet,
+                            <p> <b>Registered Office :</b> Ashoka Raghupathi Chambers , Chikoti Garden Rd, Old
+                                Patigadda, Chikoti Gardens, Begumpet,
                                 Hyderabad, Telangana 500016
                             </p>
                             <p><b>Tollfree No : 1800 8906 122</b></p>
@@ -414,15 +629,15 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="">City</label>
-                                <input type="text" class="form-control" id="validationDefault04" placeholder="e.g. Hyderabad"
-                                    name="city"
+                                <input type="text" class="form-control" id="validationDefault04"
+                                    placeholder="e.g. Hyderabad" name="city"
                                     onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
                                     minlength="4" maxlength="20" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="">State</label>
-                                <input type="text" class="form-control" id="validationDefault05" placeholder="e.g. Telangana"
-                                    name="state"
+                                <input type="text" class="form-control" id="validationDefault05"
+                                    placeholder="e.g. Telangana" name="state"
                                     onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
                                     minlength="4" maxlength="20" required>
                             </div>
