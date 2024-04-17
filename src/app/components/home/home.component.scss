@@ -40,6 +40,57 @@
 
 }
 
+.live-rates {
+    .img {
+        img {
+            width: 100%;
+        }
+    }
+
+    .text {
+        padding: 20px;
+        height: 100%;
+        border-radius: 10px;
+        border: 1px solid #c6c6c7;
+
+        .purity {
+            font-size: 14px;
+
+            img {
+                width: 10%;
+                padding-right: 10px;
+                margin-top: -3px;
+            }
+
+            color: var(--heading-two-color);
+
+            b {
+                float: right;
+                font-weight: 400;
+            }
+        }
+
+        .rate {
+            text-align: center;
+            padding: 8px 0px;
+
+            p:nth-child(2) {
+                margin-bottom: 0px;
+                font-size: 22px;
+            }
+        }
+
+    }
+
+    .gold {
+        background-color: #FFFDF5;
+    }
+
+    .silver {
+        background-color: #ECECED;
+    }
+}
+
 .about-home {
     img {
         width: 100%;
@@ -50,7 +101,7 @@
 
         .content {
             text-align: center;
-            padding: 10%;
+            padding: 6% 10%;
             height: 100%;
 
             h2 {
@@ -145,7 +196,7 @@
         border: 1px solid #d6d6d6;
         border-radius: 10px;
         text-align: center;
-        padding: 15px;
+        padding: 12px;
 
         h2 {
             color: var(--heading-one-color);
@@ -259,6 +310,38 @@
         p {
             margin: 0px;
         }
+
+        button:hover {
+            color: var(--gold-color);
+            background-color: var(--heading-one-color);
+        }
+    }
+}
+
+.stock-details {
+    .img {
+        text-align: center;
+    }
+
+    .stock {
+        .box {
+            padding: 15px;
+            border: 1px solid #d6d6d6;
+            border-radius: 5px;
+            margin-bottom: 20px;
+
+            p {
+                b {
+                    float: right;
+                }
+            }
+
+            p:nth-child(3) {
+                margin-bottom: 0px;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
     }
 }
 
@@ -281,9 +364,28 @@
             margin-bottom: 15px;
         }
     }
-    .reach-us{
-        .box{
+
+    .reach-us {
+        .box {
             margin-bottom: 15px;
+        }
+    }
+
+    .live-rates {
+        .img {
+            margin-bottom: 20px;
+        }
+
+        .text {
+            margin-bottom: 20px;
+        }
+
+        .gold {
+            height: auto;
+        }
+
+        .silver {
+            height: auto;
         }
     }
 
