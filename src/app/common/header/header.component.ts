@@ -1,4 +1,4 @@
-import { Component, HostListener} from '@angular/core';
+import { Component, HostListener, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -37,5 +37,15 @@ export class HeaderComponent {
         position.classList.remove('nav-position');
       }
     }
+  }
+  //nav bar home page
+  refreshPage() {
+    window.location.reload();
+  }
+  // mobile nav close 
+  @ViewChild('navbarCollapse') navbarCollapse: any;
+
+  closeNavbar() {
+    this.navbarCollapse.nativeElement.classList.remove('show');
   }
 }
