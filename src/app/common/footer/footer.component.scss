@@ -22,4 +22,11 @@
 @media only screen and (max-width: 767px) {
     /* CSS rules for screens smaller than or equal to 767px wide */
     /* Adjust styles for smaller screens here */
+    .bottom-bar{
+        padding-right: 16%;
+        u{
+            padding-top: 10px;
+            float: left!important;
+        }
+    }
 }

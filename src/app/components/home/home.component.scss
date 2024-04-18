@@ -292,6 +292,12 @@
                 }
 
                 .text {
+                    p{
+                        a{
+                            color: var(--bs-body-color);
+                            text-decoration: none;
+                        }
+                    }
                     p:nth-child(1) {
                         margin-bottom: 0px;
                     }
