@@ -1,0 +1,51 @@
+<!-- Navbar on top of Carousel -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="/" (click)="refreshPage()"><img src="assets/img/logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" #navbarCollapse id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="/" (click)="refreshPage()">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-us" (click)="closeNavbar()">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services" (click)="closeNavbar()">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#innovative" (click)="closeNavbar()">Innovative</a>
+          </li>
+          <!-- <li class="nav-item dropdown">  
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+            Latest Updates
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/gold-rate-trend">
+                Gold Rate Trend</a>
+              
+            </div>
+            
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#progressive" (click)="closeNavbar()">Progressive</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-us" (click)="closeNavbar()">Contact Us</a>
+          </li>
+          <!-- Add more nav items as needed -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <!-- scroll top -->
+  <button class="scroll-top-btn" (click)="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+  <!-- socila media  -->
+   
