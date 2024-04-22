@@ -1,0 +1,108 @@
+/* Fixed navbar */
+.navbar {
+
+    width: 100%;
+    z-index: 1000;
+    padding: 5px 0px;
+
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .active {
+        color: #101729 !important;
+    }
+
+    /* Logo left, nav items right */
+    .navbar-brand {
+        margin-right: auto;
+        width: 20%;
+        padding: 0px;
+
+        img {
+            width: 40%;
+            padding: 5px 0px;
+        }
+    }
+
+    .navbar-nav {
+        margin-left: auto;
+
+
+        .nav-item {
+            padding: 0px 3px;
+
+            .dropdown-menu {
+
+                border: none;
+                border-top: 5px solid var(--gold-color);
+                top: 120%;
+                border-radius: 0px;
+
+
+                // .dropdown-item {
+                //     color: var(--heading-color);
+                // }
+            }
+
+            .nav-link {
+                color: var(--heading-color);
+                font-size: 16px;
+            }
+
+            .nav-link:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+/* scroll top  */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--gold-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.scroll-top-btn:hover {
+    background-color: var(--heading-one-color);
+    color: var(--gold-color);
+}
+
+.scroll-top-btn-hidden {
+    display: none !important;
+}
+
+.nav-position {
+    position: fixed;
+    background-color: #fff;
+    transition: .3s;
+    top: 0;
+}
+
+// scrool top end
+
+//social media
+
+
+
+@media only screen and (max-width: 767px) {
+    .navbar-brand {
+
+        img {
+            width: 100% !important;
+        }
+    }
+
+   
+
+}
