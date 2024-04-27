@@ -38,7 +38,7 @@ export class HomeComponent {
 
       const currentLivesellprice24 = res.carat24.sell_price_per_gram + 10;
       // const currentLivesellprice22 = res.carat22.sell_price_per_gram;
-      const currentLivesellpricesilver = res.silver_prices.sell_price_per_gram + 10;
+      const currentLivesellpricesilver = res.silverPrice.sell_price_per_gram + 10;
       this.updatedDate = res.carat24.updated_at;
 
       this.livesellprice24color = this.getTextColor(
