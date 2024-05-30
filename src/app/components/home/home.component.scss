@@ -1,3 +1,5 @@
+@import '/src/styles.scss';
+
 #carouselExampleIndicators {
 
     .web,
@@ -292,12 +294,13 @@
                 }
 
                 .text {
-                    p{
-                        a{
+                    p {
+                        a {
                             color: var(--bs-body-color);
                             text-decoration: none;
                         }
                     }
+
                     p:nth-child(1) {
                         margin-bottom: 0px;
                     }
@@ -327,27 +330,192 @@
 .stock-details {
     .img {
         text-align: center;
+
+        h2 {
+            font-size: 20px;
+        }
+
+        img {
+
+            width: 20%;
+        }
     }
 
+    // stock start 
     .stock {
-        .box {
-            padding: 15px;
-            border: 1px solid #d6d6d6;
-            border-radius: 5px;
-            margin-bottom: 20px;
+        display: none;
+    }
+    // .hidden {
+    //     display: none;
+    // }
+    
+    // .show {
+    //     display: block;
+    // }
+
+
+    .main {
+        padding-top: 10px;
+        border: 1px solid #d6d6d6;
+        border-radius: 5px;
+        position: relative;
+
+        overflow: hidden;
+        /* Ensure content doesn't overflow */
+        width: 100%;
+        height: 100%;
+    }
+
+    .image {
+        position: relative;
+        z-index: 1;
+
+        h2 {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .click {
+            margin-top: -14%;
+            text-align: center;
 
             p {
-                b {
+                color: #fff;
+                margin-bottom: 0px;
+                background-color: #00000069;
+                z-index: 99999;
+                position: relative;
+                padding: 6px 0px;
+                cursor: pointer;
+            }
+        }
+
+        .icon-bar {
+            position: absolute;
+            top: 50%;
+
+            a {
+                display: block;
+                text-align: center;
+                padding: 12px;
+                transition: all 0.3s ease;
+                color: white;
+                font-size: 16px;
+                width: 100%;
+                text-decoration: none;
+                margin-left: -68%;
+                margin-bottom: 10px;
+                background-color: #000;
+
+
+                i {
+                    padding-left: 26px;
+                    padding-right: 6px;
                     float: right;
+                    padding-top: 5px;
                 }
             }
 
-            p:nth-child(3) {
-                margin-bottom: 0px;
-                font-weight: 600;
-                text-align: center;
+            a:hover {
+                margin-left: 0;
             }
         }
+
+    }
+
+    .box.show {
+        left: 0;
+
+    }
+
+    .box {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+
+        padding: 6px;
+        background-color: #fff;
+        border: 1px solid #d6d6d6;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        transition: left 0.5s ease-in-out;
+
+        p {
+            margin-bottom: 0px;
+        }
+
+        p:nth-child(3) {
+            margin-bottom: 0px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        table {
+            text-align: center;
+
+            th,
+            td {
+                border: 0.1px solid #00000029;
+            }
+        }
+
+        h2 {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .close {
+            position: absolute;
+            bottom: 20px;
+            width: 85%;
+            right: 20px;
+            text-align: center;
+            cursor: pointer;
+
+            p {
+                color: #fff;
+                margin-bottom: 0px;
+                background-color: #00000069;
+
+
+                padding: 6px 0px;
+            }
+        }
+
+        .bg-gold {
+
+
+            th {
+                background-color: #000;
+                color: $gold-color;
+            }
+        }
+
+        .bg-silver {
+
+
+            th {
+                background-color: #000;
+                color: $primary-color;
+            }
+        }
+    }
+
+    // end
+
+    .show {
+        display: block !important;
+    }
+
+    .none {
+        display: none !important;
     }
 }
 

@@ -9,6 +9,48 @@ import { takeUntil } from 'rxjs/operators';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  selectedCity: string = '';
+  citys: string[] = ['hyderabad', 'visakhapatnam'];
+  selectedLocation: string = '';
+  locations: string[] = [];
+
+  cityToLocationsMap: { [key: string]: string[] } = {
+    hyderabad: ['Ameerpet', 'Prakash Nagar'],
+    visakhapatnam: ['Vizag', 'Beach']
+  };
+  get filteredLocations() {
+    return this.selectedLocation ? this.locations.filter(loc => loc === this.selectedLocation) : this.locations;
+  }
+  updateLocations() {
+
+    this.locations = this.cityToLocationsMap[this.selectedCity] || [];
+    this.selectedLocation = ''; // Reset selected location
+
+    if (this.selectedCity === 'hyderabad') {
+      this.locations = ['ameerpate', 'prakesh nagar'];
+    } else if (this.selectedCity === 'visakhapatnam') {
+      this.locations = ['Vizag', 'Beach']; // Adjust this as per your data
+    }
+  }
+
+  clearSelections() {
+    this.selectedCity = '';
+    this.selectedLocation = '';
+    this.locations = [];
+  }
+  //  show stock and close
+  
+  
+  contentVisible: boolean[] = [];
+
+  showContent(index: number) {
+    this.contentVisible[index] = true;
+  }
+
+  hideContent(index: number) {
+    this.contentVisible[index] = false;
+  }
+  // live price
   livesellprice24: any = 0;
   // livesellprice22: any = 0;
   livesellpricesilver: any = 0;
@@ -21,11 +63,11 @@ export class HomeComponent {
   previousLivesellpricesilver: number = 0;
   updatedDate: any;
 
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService) { }
 
   ngOnInit() {
     this.getliveprices();
-   
+
   }
 
   ngOnDestroy() {
@@ -58,7 +100,7 @@ export class HomeComponent {
       // this.livesellprice22 = currentLivesellprice22;
       this.livesellpricesilver = currentLivesellpricesilver;
 
-      this.previousLivesellprice24 =  currentLivesellprice24;
+      this.previousLivesellprice24 = currentLivesellprice24;
       // this.previousLivesellprice22 = currentLivesellprice22;
       this.previousLivesellpricesilver = currentLivesellpricesilver;
     });
@@ -69,7 +111,7 @@ export class HomeComponent {
       return 'red';
     } else if (currentPrice < previousPrice) {
       return 'green';
-    } else {  
+    } else {
       return 'black';
     }
   }
