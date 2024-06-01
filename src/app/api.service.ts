@@ -2,7 +2,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Environment } from '../environments/environment';
-import { BehaviorSubject, Observable, Subject, catchError, interval, merge, switchMap, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, forkJoin,Subject, catchError, interval, merge, switchMap, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -67,4 +67,22 @@ export class ApiService {
   put(endpoint: string, params?: {}) {
     return this.http.put(this.serverEndpoint + endpoint, params);
   }
+
+  //atm stock 
+  @Injectable({
+    providedIn: 'root'
+  })
+  private stockUrl = Environment.stockUrl;
+
+
+
+  getStock(atmId: string): Observable<any> {
+    return this.http.get(`${this.stockUrl}${atmId}`);
+  }
+
+  getStocks(atmIds: string[]): Observable<any[]> {
+    const requests = atmIds.map(id => this.getStock(id));
+    return forkJoin(requests);
+  }
+   
 }

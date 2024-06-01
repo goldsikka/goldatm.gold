@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../api.service';
 import { interval, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -9,38 +9,10 @@ import { takeUntil } from 'rxjs/operators';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  selectedCity: string = '';
-  citys: string[] = ['hyderabad', 'visakhapatnam'];
-  selectedLocation: string = '';
-  locations: string[] = [];
 
-  cityToLocationsMap: { [key: string]: string[] } = {
-    hyderabad: ['Ameerpet', 'Prakash Nagar'],
-    visakhapatnam: ['Vizag', 'Beach']
-  };
-  get filteredLocations() {
-    return this.selectedLocation ? this.locations.filter(loc => loc === this.selectedLocation) : this.locations;
-  }
-  updateLocations() {
-
-    this.locations = this.cityToLocationsMap[this.selectedCity] || [];
-    this.selectedLocation = ''; // Reset selected location
-
-    if (this.selectedCity === 'hyderabad') {
-      this.locations = ['ameerpate', 'prakesh nagar'];
-    } else if (this.selectedCity === 'visakhapatnam') {
-      this.locations = ['Vizag', 'Beach']; // Adjust this as per your data
-    }
-  }
-
-  clearSelections() {
-    this.selectedCity = '';
-    this.selectedLocation = '';
-    this.locations = [];
-  }
   //  show stock and close
-  
-  
+
+
   contentVisible: boolean[] = [];
 
   showContent(index: number) {
@@ -67,9 +39,15 @@ export class HomeComponent {
 
   ngOnInit() {
     this.getliveprices();
+    // stock 
+    this.api.getStocks(this.atmIds).subscribe(data => {
+      this.stocks = data.map((stock, index) => ({
+        data: stock
+      }));
+    });
 
   }
-
+  
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
@@ -115,4 +93,28 @@ export class HomeComponent {
       return 'black';
     }
   }
+
+  //stock details 
+
+  atmIds = ['GS000006-2024-XYUG-V1-91', 'GS000005-2024-XYUG-V1-91', 'GS00001-2023-XYUG-V1-91', 'GS000003-2024-XYUG-V2-91'];
+ 
+  stocks: any[] = [];
+
+  processStockData(stock: any) {
+    const gold = [];
+    const silver = [];
+    for (let i = 0; i < stock.length; i++) {
+      if (stock[i].type === 'Gold') {
+        gold.push(stock[i]);
+      } else if (stock[i].type === 'Silver') {
+        silver.push(stock[i]);
+      }
+    }
+    return { gold, silver };
+  }
+
+  isAvailable(count: number): string {
+    return count > 0 ? 'Yes' : 'No';
+  }
+
 }

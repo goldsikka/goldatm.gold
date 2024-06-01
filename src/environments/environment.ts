@@ -5,5 +5,5 @@ export const Environment = {
     apiUrl: 'https://api.goldbox.gold/api/',
 
     // apiUrl: 'http://stg-goldbox-api.goldsikka.com:8080/api/',
-
+    stockUrl: 'https://api.goldatm.gold/api/singleatmstock/',
 }

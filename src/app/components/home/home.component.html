@@ -351,37 +351,36 @@
         <h2 class="headings mb-4"> <b>Gold ATM</b> Locator</h2>
         <div class="row">
             <div class="col-md-4">
-                <select [(ngModel)]="selectedCity" id="cityDropdown" class="form-select" (change)="updateLocations()">
+                <select class="form-select">
                     <option value="" selected>Select City *</option>
-                    <option *ngFor="let city of citys">{{city}}</option>
+                    <!-- <option *ngFor="let city of atmCities">{{ city }}</option> -->
                 </select>
             </div>
             <div class="col-md-4">
-                <select [(ngModel)]="selectedLocation" id="locationDropdown" class="form-select"
-                    [disabled]="!selectedCity">
+                <select class="form-select">
                     <option value="" selected>Select Location *</option>
-                    <option *ngFor="let location of locations" [value]="location">{{location}}</option>
+                    <option></option>
                 </select>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-primary" type="button" (click)="clearSelections()">Clear</button>
+                <button class="btn btn-primary" type="button">Clear</button>
             </div>
 
         </div>
-        <div class="img" [class.hidden]="selectedCity" [class.stock]="selectedCity">
+        <div class="img">
             <img src="assets/img/select-atm.png" alt="">
             <h2>Nothing Here</h2>
             <p>
                 Please select Filters. The data will come here
             </p>
         </div>
-        <div class="stock space" [class.hidden]="!selectedCity" [class.stock]="!selectedCity">
+        <div class=" space">
 
             <div class="row">
-                <div class="col-md-3" *ngFor="let location of filteredLocations; let i = index">
+                <div class="col-md-3" *ngFor="let i = index;let stock of stocks;">
                     <div class="main">
                         <div class="image">
-                            <h2>{{location}}</h2>
+                            <h2>{{ atmIds[i] }}</h2>
                             <img src="assets/img/evolution.jpg" alt="">
                             <div class="icon-bar">
                                 <a href="#">Share <i class="fa-solid fa-share-nodes"></i></a>
@@ -406,35 +405,11 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th>0.5</th>
-                                                <th>
-                                                    <p class="text-success">Yes</p>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <th>1</th>
-                                                <th>
-                                                    <p class="text-danger">No</p>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <th>2</th>
-                                                <th>
-                                                    <p class="text-danger">No</p>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <th>5</th>
-                                                <th>
-                                                    <p class="text-danger">No</p>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <th>10</th>
-                                                <th>
-                                                    <p class="text-danger">No</p>
-                                                </th>
+                                            <tr *ngFor="let item of processStockData(stock.data).gold">
+                                                <td>{{ item.grams }}</td>
+                                                <td
+                                                    [ngClass]="isAvailable(item.count) === 'Yes' ? 'text-success' : 'text-danger'">
+                                                    <b>{{ isAvailable(item.count) }}</b></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -451,36 +426,15 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th>5</th>
-                                                <th>
-                                                    <p class="text-success">Yes</p>
-                                                </th>
+                                            <tr *ngFor="let item of processStockData(stock.data).silver">
+                                                <td>{{ item.grams }}</td>
+                                                <td
+                                                    [ngClass]="isAvailable(item.count) === 'Yes' ? 'text-success' : 'text-danger'">
+                                                    <b>{{ isAvailable(item.count) }}</b></td>
+
                                             </tr>
-                                            <tr>
-                                                <th>10</th>
-                                                <th>
-                                                    <p class="text-danger">No</p>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <th>20</th>
-                                                <th>
-                                                    <p class="text-danger">No</p>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <th>50</th>
-                                                <th>
-                                                    <p class="text-danger">No</p>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <th>100</th>
-                                                <th>
-                                                    <p class="text-danger">No</p>
-                                                </th>
-                                            </tr>
+
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -495,6 +449,43 @@
         </div>
     </div>
 </section>
+
+<!-- <div *ngFor="let stock of stocks">
+    <h2>{{ stock.locat }}</h2>
+
+    <h3>Gold Stock</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Grams</th>
+                <th>Available</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of processStockData(stock.data).gold">
+                <td>{{ item.grams }}</td>
+                <td>{{ isAvailable(item.count) }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Silver Stock</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Grams</th>
+                <th>Available</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of processStockData(stock.data).silver">
+                <td>{{ item.grams }}</td>
+                <td>{{ isAvailable(item.count) }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
 <section class="locations mb-4">
     <div class="container">
         <h2 class="headings mb-4">Our Locations</h2>
