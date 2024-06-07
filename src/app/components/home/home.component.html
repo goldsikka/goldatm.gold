@@ -350,23 +350,39 @@
     <div class="container">
         <h2 class="headings mb-4"> <b>Gold ATM</b> Locator</h2>
         <div class="row">
-            <div class="col-md-4">
-                <select class="form-select">
-                    <option value="" selected>Select City *</option>
-                    <!-- <option *ngFor="let city of atmCities">{{ city }}</option> -->
+            <div class="col-md-3">
+                <select class="form-select" [disabled]="!states.length" (change)="selectState($event)">
+                    <option value="" selected>Select State *</option>
+                    <option *ngFor="let state of states" [value]="state">{{ state }}</option>
                 </select>
             </div>
-            <div class="col-md-4">
-                <select class="form-select">
+            <div class="col-md-3">
+                <select class="form-select" [disabled]="!cities?.length" (change)="selectCity($event)">
+                    <option value="" selected>Select City *</option>
+                    <option *ngFor="let city of cities" [value]="city.city">{{ city.city }}</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select" [disabled]="!location_list?.length" (change)="selectLocation($event)">
                     <option value="" selected>Select Location *</option>
-                    <option></option>
+                    <option *ngFor="let location of location_list" [value]="location.atmlocation">{{
+                        location.atmlocation }}</option>
                 </select>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-primary" type="button">Clear</button>
+                <button class="btn btn-primary" type="button" (click)="clearFields()">Clear</button>
             </div>
-
         </div>
+        <p class="text-center mt-3">(OR)</p>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-3">
+                <input type="number" class="form-control">
+            </div>
+            <div class="col-md-4"> <button class="btn btn-primary" type="button">Search</button></div>
+        </div>
+
+
         <div class="img">
             <img src="assets/img/select-atm.png" alt="">
             <h2>Nothing Here</h2>
@@ -375,22 +391,22 @@
             </p>
         </div>
         <div class=" space">
-
             <div class="row">
-                <div class="col-md-3" *ngFor="let i = index;let stock of stocks;">
+                <div class="col-md-3">
                     <div class="main">
                         <div class="image">
-                            <h2>{{ atmIds[i] }}</h2>
+                            <h2> {{atmlocation }}</h2>
+
                             <img src="assets/img/evolution.jpg" alt="">
                             <div class="icon-bar">
                                 <a href="#">Share <i class="fa-solid fa-share-nodes"></i></a>
                                 <a href="#">Directions <i class="fa-solid fa-diamond-turn-right"></i></a>
                             </div>
-                            <div class="click" (click)="showContent(i)">
+                            <div class="click" (click)="toggleShow()">
                                 <p>Click to View Stock</p>
                             </div>
                         </div>
-                        <div class="box" [ngClass]="{'show': contentVisible[i], 'hidden': !contentVisible[i]}">
+                        <div class="box" [class.show]="isShown">
                             <h2>Stock Details :</h2>
                             <div class="row">
                                 <div class="col-md-6">
@@ -405,11 +421,9 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr *ngFor="let item of processStockData(stock.data).gold">
-                                                <td>{{ item.grams }}</td>
-                                                <td
-                                                    [ngClass]="isAvailable(item.count) === 'Yes' ? 'text-success' : 'text-danger'">
-                                                    <b>{{ isAvailable(item.count) }}</b></td>
+                                            <tr *ngFor="let data of goldData">
+                                                <td>{{ data.grams }}</td>
+                                                <td>{{ isAvailable(data.count) }}</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -426,21 +440,17 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr *ngFor="let item of processStockData(stock.data).silver">
-                                                <td>{{ item.grams }}</td>
-                                                <td
-                                                    [ngClass]="isAvailable(item.count) === 'Yes' ? 'text-success' : 'text-danger'">
-                                                    <b>{{ isAvailable(item.count) }}</b></td>
-
+                                            <tr *ngFor="let data of silverData">
+                                                <td>{{ data.grams }}</td>
+                                                <td>{{ isAvailable(data.count) }}</td>
                                             </tr>
-
-
                                         </tbody>
                                     </table>
+
                                 </div>
                             </div>
-                            <div class="close">
-                                <p (click)="hideContent(i)">Close</p>
+                            <div class="close" (click)="closeBox()">
+                                <p>Close</p>
                             </div>
                         </div>
                     </div>
@@ -449,9 +459,8 @@
         </div>
     </div>
 </section>
-
 <!-- <div *ngFor="let stock of stocks">
-    <h2>{{ stock.locat }}</h2>
+    <h2>{{ atmIds }}</h2>
 
     <h3>Gold Stock</h3>
     <table class="table">
@@ -485,7 +494,27 @@
         </tbody>
     </table>
 </div> -->
+<!-- <table class="table">
+                <thead>
+                    <tr>
+                        <th>atmid</th>
+                        <th>atmlocation</th>
+                        <th>count</th>
+                        <th>grams</th>
+                        <th>type</th>
 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of newwww">
+                        <td>{{data.atmid}}</td>
+                        <td>{{data.atmlocation}}</td>
+                        <td>{{data.count}}</td>
+                        <td>{{data.grams}}</td>
+                        <td>{{data.type}}</td>
+                    </tr>
+                </tbody>
+            </table> -->
 <section class="locations mb-4">
     <div class="container">
         <h2 class="headings mb-4">Our Locations</h2>

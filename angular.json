@@ -20,7 +20,7 @@
             "outputPath": "dist/goldatm.gold",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "buildCache": false,
+           
             "polyfills": [
               "zone.js"
             ],

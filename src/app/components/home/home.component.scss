@@ -345,10 +345,11 @@
     .stock {
         display: none;
     }
+
     // .hidden {
     //     display: none;
     // }
-    
+
     // .show {
     //     display: block;
     // }
@@ -517,6 +518,18 @@
     .none {
         display: none !important;
     }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 @media only screen and (max-width: 767px) {
