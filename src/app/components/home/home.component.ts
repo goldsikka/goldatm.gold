@@ -93,7 +93,9 @@ export class HomeComponent {
 
   selectLocation(data: any) {
     this.location_value = data.target.value;
-    const atmId = this.location_list.find((value: any) => value.atmlocation == this.location_value);
+    this.isLocationSelected = !!this.location_value;
+
+    const atmId = this.location_list.find((value: any) => value.atmlocation === this.location_value);
     if (atmId) {
       this.atmId = atmId.atmid;
       this.api.getStock(this.atmId).subscribe((res: any) => {
@@ -115,12 +117,7 @@ export class HomeComponent {
   }
 
   clearFields() {
-    // Clear all selected values
-    this.state_value = "";
-    this.city = "";
-    this.location_value = "";
-    // Reset dropdown visibility
-    this.contentVisible = [true, false, false];
+    window.location.reload();
   }
 
   // Initialize the lists
@@ -196,4 +193,6 @@ export class HomeComponent {
   closeBox() {
     this.isShown = false;
   }
+  // stock view
+  isLocationSelected = false;
 }

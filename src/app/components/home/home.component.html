@@ -383,7 +383,7 @@
         </div>
 
 
-        <div class="img">
+        <div class="img" [class.none]="isLocationSelected">
             <img src="assets/img/select-atm.png" alt="">
             <h2>Nothing Here</h2>
             <p>
@@ -391,9 +391,10 @@
             </p>
         </div>
         <div class=" space">
+
             <div class="row">
                 <div class="col-md-3">
-                    <div class="main">
+                    <div class="main" [class.show]="isLocationSelected">
                         <div class="image">
                             <h2> {{atmlocation }}</h2>
 
@@ -456,6 +457,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
