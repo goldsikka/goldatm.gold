@@ -106,4 +106,10 @@ export class ApiService {
   getStocks(atmId:any): Observable<any[]> {
     return this.http.get<any>(this.stockUrl + atmId);
   }
+
+  // pincode
+  pincodeUrl = Environment.pincodeUrl;
+  getAtmLocationsByPincode(pincode: string): Observable<any> {
+    return this.http.get<any>(`${this.pincodeUrl}/${pincode}`);
+  }
 }

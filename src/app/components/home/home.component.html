@@ -376,20 +376,42 @@
         <p class="text-center mt-3">(OR)</p>
         <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-md-3">
-                <input type="number" class="form-control">
+            <!-- <div class="col-md-3">
+                <input type="text" class="form-control" [(ngModel)]="pincode" (input)="validatePincode()"
+                    placeholder="Enter Pincode*">
             </div>
-            <div class="col-md-4"> <button class="btn btn-primary" type="button">Search</button></div>
+            <div class="col-md-5">
+                <button class="btn btn-primary" type="button" [disabled]="!isSearchEnabled"
+                    (click)="searchAtmLocations()">Search</button> <b class="p-2"></b>
+                <button class="btn btn-secondary" type="button">Clear</button>
+            </div> -->
+
         </div>
+        <!-- dumy table for pincode fetch -->
+        <!-- <div *ngIf="atmLocations.length > 0" class="table-responsive mt-3">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ATM Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let atm of atmLocations">
+                        <td>{{ atm.atmlocation }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> -->
 
 
-        <div class="img" [class.none]="isLocationSelected">
+        <div class="img space" [class.none]="isLocationSelected">
             <img src="assets/img/select-atm.png" alt="">
             <h2>Nothing Here</h2>
             <p>
                 Please select Filters. The data will come here
             </p>
         </div>
+
         <div class=" space">
 
             <div class="row">
@@ -461,62 +483,6 @@
         </div>
     </div>
 </section>
-<!-- <div *ngFor="let stock of stocks">
-    <h2>{{ atmIds }}</h2>
-
-    <h3>Gold Stock</h3>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Grams</th>
-                <th>Available</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of processStockData(stock.data).gold">
-                <td>{{ item.grams }}</td>
-                <td>{{ isAvailable(item.count) }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h3>Silver Stock</h3>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Grams</th>
-                <th>Available</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of processStockData(stock.data).silver">
-                <td>{{ item.grams }}</td>
-                <td>{{ isAvailable(item.count) }}</td>
-            </tr>
-        </tbody>
-    </table>
-</div> -->
-<!-- <table class="table">
-                <thead>
-                    <tr>
-                        <th>atmid</th>
-                        <th>atmlocation</th>
-                        <th>count</th>
-                        <th>grams</th>
-                        <th>type</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let data of newwww">
-                        <td>{{data.atmid}}</td>
-                        <td>{{data.atmlocation}}</td>
-                        <td>{{data.count}}</td>
-                        <td>{{data.grams}}</td>
-                        <td>{{data.type}}</td>
-                    </tr>
-                </tbody>
-            </table> -->
 <section class="locations mb-4">
     <div class="container">
         <h2 class="headings mb-4">Our Locations</h2>

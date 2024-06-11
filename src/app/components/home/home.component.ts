@@ -195,4 +195,25 @@ export class HomeComponent {
   }
   // stock view
   isLocationSelected = false;
+
+  //pincode
+
+  // pincode: string = '';
+  // isSearchEnabled: boolean = false;
+  // atmLocations: any[] = [];
+  // storedAtmIds: string[] = [];  
+  // validatePincode() {
+  //   const pincodePattern = /^\d{6}$/;  
+  //   this.isSearchEnabled = pincodePattern.test(this.pincode);
+  // }
+
+  // searchAtmLocations() {
+  //   if (this.isSearchEnabled) {
+  //     this.api.getAtmLocationsByPincode(this.pincode).subscribe((res: any) => {
+  //       this.atmLocations = res;  
+  //       this.storedAtmIds = this.atmLocations.map(atm => atm.atmid);
+  //     });
+  //   }
+  // }
+
 }
