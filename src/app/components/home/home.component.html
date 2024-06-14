@@ -51,7 +51,7 @@
                         <div class="col-md-4 col-4">
                             <img src="assets/img/gold-rate-img.png" alt="">
                         </div>
-                        <div class="col-md-8 col-8">
+                        <div class="col-md-8 col-8"> 
                             <div class="rate">
                                 <p>Gold Live Price Per Gram</p>
                                 <p><b [ngStyle]="{'color': livesellprice24color}">{{livesellprice24|currency}}</b></p>
@@ -350,82 +350,95 @@
     <div class="container">
         <h2 class="headings mb-4"> <b>Gold ATM</b> Locator</h2>
         <div class="row">
-            <div class="col-md-3">
-                <select class="form-select" [disabled]="!states.length" (change)="selectState($event)">
-                    <option value="" selected>Select State *</option>
-                    <option *ngFor="let state of states" [value]="state">{{ state }}</option>
-                </select>
-            </div>
-            <div class="col-md-3">
-                <select class="form-select" [disabled]="!cities?.length" (change)="selectCity($event)">
-                    <option value="" selected>Select City *</option>
-                    <option *ngFor="let city of cities" [value]="city.city">{{ city.city }}</option>
-                </select>
-            </div>
-            <div class="col-md-3">
-                <select class="form-select" [disabled]="!location_list?.length" (change)="selectLocation($event)">
-                    <option value="" selected>Select Location *</option>
-                    <option *ngFor="let location of location_list" [value]="location.atmlocation">{{
-                        location.atmlocation }}</option>
-                </select>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-4">
+                        <select class="form-select" [disabled]="!states.length" (change)="selectState($event)">
+                            <option value="" selected>Select State *</option>
+                            <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+                        </select>    
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select my-select" [disabled]="!cities?.length" (change)="selectCity($event)">
+                            <option value="" selected>Select City *</option>
+                            <option *ngFor="let city of cities" [value]="city.city">{{ city.city }}</option>
+                        </select>        
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select my-select" [disabled]="!location_list" (change)="selectLocation($event)">
+                            <option value="" selected>Select Location *</option>
+                            <option *ngFor="let location of location_list" [value]="location.atmlocation">{{
+                                location.atmlocation }}</option>
+                        </select>   
+                    </div>
+                </div>
+
             </div>
             <div class="col-md-2">
-                <button class="btn btn-primary" type="button" (click)="clearFields()">Clear</button>
+                <div class="text-center my-select">
+                    <button class="btn-clear" type="button" (click)="clearFields()">Clear</button>
+                   </div>
             </div>
         </div>
         <p class="text-center mt-3">(OR)</p>
         <div class="row">
-            <div class="col-md-4"></div>
-            <!-- <div class="col-md-3">
-                <input type="text" class="form-control" [(ngModel)]="pincode" (input)="validatePincode()"
-                    placeholder="Enter Pincode*">
+            <div class="main-div">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="search-div">
+                            <input type="text" class="form-control"
+                    placeholder="Enter Pincode*" [(ngModel)]="pin_code"  [disabled]="!isFormValid"> 
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="search-div">
+                            <button class="my-search"  (click)="PinCode($event)">Search</button> <b class="p-2"></b>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="search-div">
+                            <button class="my-button" type="button" (click)="pincodefields()">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <input type="text" class="form-control"
+                    placeholder="Enter Pincode*" [(ngModel)]="pin_code"  [disabled]="!isFormValid">
             </div>
             <div class="col-md-5">
-                <button class="btn btn-primary" type="button" [disabled]="!isSearchEnabled"
-                    (click)="searchAtmLocations()">Search</button> <b class="p-2"></b>
-                <button class="btn btn-secondary" type="button">Clear</button>
+                <button class="my-search"  (click)="PinCode($event)">Search</button> <b class="p-2"></b>
+                <button class="my-button" type="button" (click)="pincodefields()">Clear</button>
             </div> -->
-
         </div>
-        <!-- dumy table for pincode fetch -->
-        <!-- <div *ngIf="atmLocations.length > 0" class="table-responsive mt-3">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>ATM Location</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let atm of atmLocations">
-                        <td>{{ atm.atmlocation }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div> -->
 
-
-        <div class="img space" [class.none]="isLocationSelected">
+        <div  class="img space" [ngClass]="{'none': isLocationSelected}">
             <img src="assets/img/select-atm.png" alt="">
-            <h2>Nothing Here</h2>
+            <h2>No Data Found</h2>
             <p>
                 Please select Filters. The data will come here
             </p>
         </div>
 
-        <div class=" space">
+        <!-- <div *ngIf="errorMessage">
+           <div class="text-center">
+            <img src="../../../assets/img/no-data.jpg">
+           </div>
+        </div> -->
 
+        <div class=" space" *ngIf="locationid == 1">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3" >
                     <div class="main" [class.show]="isLocationSelected">
                         <div class="image">
-                            <h2> {{atmlocation }}</h2>
-
+                            <h2>{{atmlocation}}</h2>
                             <img src="assets/img/evolution.jpg" alt="">
                             <div class="icon-bar">
-                                <a href="#">Share <i class="fa-solid fa-share-nodes"></i></a>
-                                <a href="#">Directions <i class="fa-solid fa-diamond-turn-right"></i></a>
+                                <!-- <a href="#">Share <i class="fa-solid fa-share-nodes"></i></a> -->
+                                <a href="#" (click)="openMap($event)" target="_blank">Directions<i class="fa-solid fa-diamond-turn-right"></i></a>
                             </div>
-                            <div class="click" (click)="toggleShow()">
+                            <div class="click" (click)="toggleShow1()">
                                 <p>Click to View Stock</p>
                             </div>
                         </div>
@@ -479,8 +492,77 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
+
+        <div class=" space" *ngIf="locationid == 2">
+            <div class="row">
+                <div class="col-md-3" *ngFor="let item of PinCodeGet">
+                    <div class="main" [class.show]="isLocationSelected">
+                        <div class="image" >
+                            <h2>{{item.atmlocation}}</h2>
+                            <img src="assets/img/evolution.jpg" alt="">
+                            <div class="icon-bar">
+                                <!-- <a href="#">Share <i class="fa-solid fa-share-nodes"></i></a> -->
+                                <a href="#" (click)="openMap($event)" target="_blank">Directions<i class="fa-solid fa-diamond-turn-right"></i></a>
+                            </div>
+                            <div class="click" (click)="toggleShow(item.atmid)">
+                                <p>Click to View Stock</p>
+                            </div>
+                        </div>
+                        <div class="box" [class.show]="show_flag[item.atmid]">
+                            <h2>Stock Details :</h2>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <table class="table table-responsive table-borderd">
+                                        <thead>
+                                            <tr class="bg-gold">
+                                                <th colspan="2">Gold</th>
+                                            </tr>
+                                            <tr>
+                                                <th>gms</th>
+                                                <th>Stock</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let data of goldData_pin">
+                                                <td>{{ data.grams }}</td>
+                                                <td>{{ isAvailable(data.count) }}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-6">
+                                    <table class="table table-responsive table-borderd">
+                                        <thead>
+                                            <tr class="bg-silver">
+                                                <th colspan="2">Silver</th>
+                                            </tr>
+                                            <tr>
+                                                <th>gms</th>
+                                                <th>Stock</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let data of silverData_pin">
+                                                <td>{{ data.grams }}</td>
+                                                <td>{{ isAvailable(data.count) }}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                            <div class="close" (click)="closeBox1()">
+                                <p>Close</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </section>
 <section class="locations mb-4">

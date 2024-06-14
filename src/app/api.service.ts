@@ -12,6 +12,7 @@ export class ApiService {
   public cartData$: Subject<any> = new Subject;
   public wishCountData$: Subject<any> = new Subject;
   private refreshInterval = 1000;
+ 
 
   constructor(private http: HttpClient) {
     if (Environment.production) {
@@ -108,8 +109,26 @@ export class ApiService {
   }
 
   // pincode
-  pincodeUrl = Environment.pincodeUrl;
-  getAtmLocationsByPincode(pincode: string): Observable<any> {
-    return this.http.get<any>(`${this.pincodeUrl}/${pincode}`);
+
+  // pincodeUrl = Environment.pincodeUrl 
+  // getAtmLocationsByPincode(pincode:any){
+  //   return this.http.get(`${this.pincodeUrl}${pincode}`);
+  // }
+
+
+
+
+
+
+  getPincode(pincode:any) {
+    return this.http.get('http://stg-api.goldatm.gold:3001/api/web-pincode/'+pincode);
   }
-}
+    
+  }
+
+
+  
+
+
+
+

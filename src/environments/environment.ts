@@ -12,5 +12,12 @@ export const Environment = {
     cityUrl: 'http://stg-api.goldatm.gold:3001/api/web-atm-city/',
     locationUrl: 'http://stg-api.goldatm.gold:3001/api/web-atm-location/',
     stockUrl:'http://stg-api.goldatm.gold:3001/api/singleatmstock/',
-    pincodeUrl:'http://stg-api.goldatm.gold:3001/api/web-pincode/',
+
+
+
+
+    // pincodeUrl:'http://stg-api.goldatm.gold:3001/api/web-pincode/',
+
+
+
 }

@@ -577,3 +577,65 @@ input[type=number] {
     }
 
 }
+
+
+@media screen and (max-width:500px){
+    .my-select{
+        margin-top: 10px;
+    }
+    .main-div{
+        width: 100% !important;
+    }
+    .search-div{
+        margin-top: 10px;
+    }
+}
+
+
+
+.btn-clear{
+    width: 100% !important;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background-color:#EF476F;
+    color:white !important;
+}
+
+.my-button{
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background-color: #EF476F;
+    color:white !important;
+}
+
+
+// .my-button-search{
+//     width: 25%;
+//     padding: 7px;
+//     border-radius: 5px;
+//     border: none;
+//     background-color:var(--gold-color);
+//     color:white !important;
+// }
+
+.my-search{
+        width: 100%;
+        padding: 7px;
+        border-radius: 5px;
+        border: none;
+        background-color:var(--gold-color);
+        color:white !important;
+}
+
+.main-div{
+    width: 50%;
+    // height: 100px;
+    // background-color: red;
+    margin: 0px auto;
+    // border: 1px solid gray;
+    padding: 20px;
+    border-radius: 4px;
+}
