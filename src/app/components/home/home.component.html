@@ -353,13 +353,14 @@
             <div class="col-md-10">
                 <div class="row">
                     <div class="col-md-4">
-                        <select class="form-select" [disabled]="!states.length" (change)="selectState($event)">
+                        <select class="form-select my-select"  [disabled]="states.length === 0" (change)="selectState($event)">
                             <option value="" selected>Select State *</option>
-                            <option *ngFor="let state of states" [value]="state">{{ state }}</option>
-                        </select>    
-                    </div>
+                            <option *ngFor="let state of states" [disabled]="newfilterdata.includes(state)"  [value]="state" class="bold">{{ state }}</option>
+                          </select>
+                          
+                    </div> 
                     <div class="col-md-4">
-                        <select class="form-select my-select" [disabled]="!cities?.length" (change)="selectCity($event)">
+                        <select class="form-select my-select" [disabled]="!cities || cities.length === 0" (change)="selectCity($event)">
                             <option value="" selected>Select City *</option>
                             <option *ngFor="let city of cities" [value]="city.city">{{ city.city }}</option>
                         </select>        

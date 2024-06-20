@@ -12,6 +12,7 @@ export class ApiService {
   public cartData$: Subject<any> = new Subject;
   public wishCountData$: Subject<any> = new Subject;
   private refreshInterval = 1000;
+  getLocationForState: any;
  
 
   constructor(private http: HttpClient) {
@@ -123,6 +124,14 @@ export class ApiService {
   getPincode(pincode:any) {
     return this.http.get('http://stg-api.goldatm.gold:3001/api/web-pincode/'+pincode);
   }
+
+
+
+ 
+    getParticularstate() {
+      return this.http.get('http://stg-api.goldatm.gold:3001/api/get-available-state');
+    }
+ 
     
   }
 

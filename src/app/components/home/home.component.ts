@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../api.service';
 import { interval, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { state } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,9 @@ import { takeUntil } from 'rxjs/operators';
 export class HomeComponent {
 
   //  show stock and close
+
+ 
+
 
   contentVisible: boolean[] = [];
   state_value: any;
@@ -26,6 +30,7 @@ export class HomeComponent {
   newwww: any;
   atmlocation: string = ""; // Initialize atmlocation property
 
+
   isLocationSelectedd: boolean = true;
 
   isFormValid = true;
@@ -33,6 +38,8 @@ export class HomeComponent {
   noDataFound: boolean = false;
 
   errorMessage: boolean = false;
+
+  
 
 
 
@@ -61,29 +68,42 @@ export class HomeComponent {
   goldData_pin: any;
   silverData_pin: any;
   stockList_pin: any;
+  hasDataForState: any;
+  stateAvailability: any;
+  
+  updateCitySelectState: any;
+  citiesPerState: any;
+  selectedState: any;
+  ParticularState: any;
+  newwwwww: any;
+  newfilterdata: any;
+ 
+ 
+ 
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService) { 
+    
+  }
 
   ngOnInit() {
-
-    // Initialize contentVisible array
     this.contentVisible = [true, false, false];
-    //live price
     this.getliveprices();
-    // stock 
-    // this.api.getStocks(this.newwwatmid).subscribe(data => {
-    //   this.stocks = data.map((stock, index) => ({
-    //     data: stock
-    //   }));
-
-    //   console.log(data[0][0].atmlocation,'hhhhhhhhhhhhhh');
-    // });
+ 
+   
+    
 
 
 
-    this.api.getStates().subscribe(data => {
-      this.states = data.map((item: { state: string }) => item.state);
+
+    this.api.getStates().subscribe(res => {
+      this.states = res.map((a: any) => a.state);
+      console.log(this.states, 'ppppppppp');
+    
     });
+
+
+    this.ParticularStates();
+
 
 
 
@@ -95,7 +115,27 @@ export class HomeComponent {
         this.longitude = PinCodeGet.longitude;
       },
     );
+
+
   }
+
+  ParticularStates(){
+    this.api.getParticularstate().subscribe((res:any)=>{
+      this.ParticularState=res.map((a: any) => a.state);
+     
+      this.newfilterdata = this.states.filter((a: any) => !this.ParticularState.includes(a));
+    console.log(this.newfilterdata, 'Filtered States');
+    })
+  }
+
+  
+
+
+
+ 
+
+
+
 
 
 
@@ -106,15 +146,22 @@ export class HomeComponent {
     this.state_value = data.target.value;
     this.api.getCities(this.state_value).subscribe((res: any) => {
       this.cities = res.adminCities;
+      this.citiesPerState[this.selectedState] = this.cities;
+      console.log(this.cities,'cccccccccccc')
       this.city = "";
       this.location_list = [];
       this.updateFormValidity();
       this.contentVisible[2] = false;
       this.contentVisible[1] = this.cities.length > 0;
+      this.states = ['State 1', 'State 2', 'State 3'];
+      this.updateCitySelectState();
     });
   }
 
+  
 
+ 
+ 
 
 
 
@@ -150,6 +197,8 @@ export class HomeComponent {
         this.location_value = "";
         this.updateFormValidity();
         this.contentVisible[2] = this.location_list.length > 0;
+
+
       });
     }
   }
@@ -157,7 +206,12 @@ export class HomeComponent {
 
 
 
+  
 
+
+
+
+   
 
 
 
@@ -171,10 +225,8 @@ export class HomeComponent {
     this.locationid = 1
     this.location_value = data.target.value;
     this.isLocationSelected = this.location_value;
-
     this.updateFormValidity();
     console.log(this.isLocationSelectedd, "ssssssssssssssssssss")
-
     const atmId = this.location_list.find((value: any) => value.atmlocation === this.location_value);
     if (atmId) {
       this.atmId = atmId.atmid;
@@ -443,8 +495,7 @@ export class HomeComponent {
 
 
 
-
-
+ 
 
 
 
@@ -455,3 +506,10 @@ export class HomeComponent {
 
 
 }
+
+
+
+
+
+
+
