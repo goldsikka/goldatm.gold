@@ -1,24 +1,26 @@
 
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Environment } from '../environments/environment';
-import { BehaviorSubject, Observable, Subject, catchError, interval, merge, switchMap, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, forkJoin, Subject, catchError, interval, merge, switchMap, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
   serverEndpoint = `${Environment.apiUrl}`;
-  public cartData$:Subject<any> = new Subject;
-  public wishCountData$:Subject<any> = new Subject;
+  public cartData$: Subject<any> = new Subject;
+  public wishCountData$: Subject<any> = new Subject;
   private refreshInterval = 1000;
+  getLocationForState: any;
  
+
   constructor(private http: HttpClient) {
     if (Environment.production) {
       this.serverEndpoint = Environment.apiUrl;
     }
   }
- 
+
   /**
    *
    * @param endpoint
@@ -42,11 +44,11 @@ export class ApiService {
   liveprice() {
     const endPoint = `/global/price/list`
     // return this.http.get(this.serverEndpoint + endPoint),interval(this.refreshInterval);
-    return merge(this.http.get<any>(this.serverEndpoint + endPoint),interval(this.refreshInterval).pipe(
+    return merge(this.http.get<any>(this.serverEndpoint + endPoint), interval(this.refreshInterval).pipe(
       switchMap(() => this.http.get<any>(this.serverEndpoint + endPoint))
     ));
   }
- 
+
 
   /**
    *
@@ -67,4 +69,75 @@ export class ApiService {
   put(endpoint: string, params?: {}) {
     return this.http.put(this.serverEndpoint + endpoint, params);
   }
-}
+
+  //atm stock 
+  @Injectable({
+    providedIn: 'root'
+  })
+
+
+
+  // state
+  private stateUrl = Environment.stateUrl;
+  getStates(): Observable<any> {
+    return this.http.get<any>(this.stateUrl);
+  }
+
+  // city
+  cityUrl = Environment.cityUrl;
+  getCities(state: string): Observable<any> {
+    return this.http.get<any>(this.cityUrl + state);
+  }
+  // location
+  locationUrl = Environment.locationUrl;
+  getLocation(user_id: string): Observable<any> {
+    return this.http.get<any>(this.locationUrl + user_id);
+  }
+
+  // stock
+  stockUrl = Environment.stockUrl;
+  // getStock(atm_id: string): Observable<any> {
+  //   return this.http.get<any>(this.stockUrl+ atm_id);
+  // }
+
+
+  getStock(atmId: string): Observable<any> {
+    return this.http.get(`${this.stockUrl}${atmId}`);
+  }
+
+  getStocks(atmId:any): Observable<any[]> {
+    return this.http.get<any>(this.stockUrl + atmId);
+  }
+
+  // pincode
+
+  // pincodeUrl = Environment.pincodeUrl 
+  // getAtmLocationsByPincode(pincode:any){
+  //   return this.http.get(`${this.pincodeUrl}${pincode}`);
+  // }
+
+
+
+
+
+
+  getPincode(pincode:any) {
+    return this.http.get('http://stg-api.goldatm.gold:3001/api/web-pincode/'+pincode);
+  }
+
+
+
+ 
+    getParticularstate() {
+      return this.http.get('http://stg-api.goldatm.gold:3001/api/get-available-state');
+    }
+ 
+    
+  }
+
+
+  
+
+
+
+
