@@ -2,7 +2,8 @@ export const Environment = {
     production: false,
 
     // Live Keys
-    apiUrl: 'https://api.goldbox.gold/api',
+    // apiUrl: 'https://api.goldbox.gold/api',
+    apiUrl: 'https://liverates-api.goldcentral.in/api/',
 
     // apiUrl: 'http://stg-goldbox-api.goldsikka.com:8080/api/',
     // stockUrl: 'https://api.goldatm.gold/api/singleatmstock/',
