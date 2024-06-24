@@ -40,7 +40,7 @@ export class ApiService {
     return this.http.get(this.serverEndpoint + endpoint, params);
   }
   liveprice() {
-    const endPoint = `/global/price/list`
+    const endPoint = `/liveRateDB`
     // return this.http.get(this.serverEndpoint + endPoint),interval(this.refreshInterval);
     return merge(this.http.get<any>(this.serverEndpoint + endPoint),interval(this.refreshInterval).pipe(
       switchMap(() => this.http.get<any>(this.serverEndpoint + endPoint))
