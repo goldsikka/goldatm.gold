@@ -9,10 +9,10 @@ export const Environment = {
     // stockUrl: 'https://api.goldatm.gold/api/singleatmstock/',
     // stockUrl: 'http://stg-api.goldatm.gold:3001/api/singleatmstock/',
 
-    stateUrl:'http://stg-api.goldatm.gold:3001/api/get-states',
-    cityUrl: 'http://stg-api.goldatm.gold:3001/api/web-atm-city/',
-    locationUrl: 'http://stg-api.goldatm.gold:3001/api/web-atm-location/',
-    stockUrl:'http://stg-api.goldatm.gold:3001/api/singleatmstock/',
+    stateUrl:'https://stg-api.goldatm.in/api/get-states',
+    cityUrl: 'https://stg-api.goldatm.in/api/web-atm-city/',
+    locationUrl: 'https://stg-api.goldatm.in/api/web-atm-location/',
+    stockUrl:'https://stg-api.goldatm.in/api/singleatmstock/',
 
 
 
